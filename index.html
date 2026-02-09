@@ -427,12 +427,22 @@ Photos (if available):
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footerRow">
-      <div><strong style="color:var(--text)">Lakeside Gas Company Incorporated</strong><div>Phone/Text: 705-808-0353 • lakesidegascompany@gmail.com</div></div>
-      <div>© <span id="yr"></span> Lakeside Gas Company Incorporated</div>
+ <footer>
+  <div class="wrap footerRow">
+    <div>
+      <strong style="color:var(--text)">Lakeside Gas Company Incorporated</strong>
+      <div>Phone/Text: 705-808-0353 • lakesidegascompany@gmail.com</div>
+
+      <!-- TSSA logo goes here -->
+      <div class="tssaBadge">
+        <img src="tssa-logo.png" alt="TSSA – Technical Standards and Safety Authority">
+      </div>
     </div>
-  </footer>
+
+    <div>© <span id="yr"></span> Lakeside Gas Company Incorporated</div>
+  </div>
+</footer>
+
 
   <script>
     document.getElementById("yr").textContent = new Date().getFullYear();
