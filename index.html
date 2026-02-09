@@ -166,13 +166,14 @@
     .footerRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </style>
   .logo{
-  height:38px;   /* desktop size */
-  width:auto;
-  display:block;
+  height:32px !important;
+  width:auto !important;
+  max-height:32px !important;
 }
-@media (max-width: 520px){
+@media (max-width:520px){
   .logo{
-    height:32px; /* mobile size */
+    height:26px !important;
+    max-height:26px !important;
   }
 }
 </head>
@@ -192,6 +193,9 @@
   <header>
     <div class="wrap nav">
       <div class="brand">
+        .brand img{
+  max-width:none;
+}
        <img src="LakesidegascoLOGOS(1)(2).png" alt="Lakeside Gas Company logo" class="logo">
       </div>
 
