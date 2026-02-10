@@ -16,7 +16,59 @@
     }
     a{color:#38bdf8;text-decoration:none}
     .wrap{max-width:980px;margin:0 auto;padding:32px 18px}
-    header{border-bottom:1px solid rgba(255,255,255,.1)}
+
+    /* NEW: sticky top bar + nav */
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(11,15,20,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 18px;
+      max-width:980px;
+      margin:0 auto;
+    }
+    .brand{
+      font-weight:800;
+      letter-spacing:.2px;
+      line-height:1.15;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:#aab6c5;
+      margin-top:4px;
+    }
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      color:#e8eef6;
+      font-weight:700;
+      font-size:14px;
+    }
+    .nav a:hover{
+      border-color:rgba(56,189,248,.55);
+    }
+    .nav a.active{
+      border-color:rgba(56,189,248,.75);
+      box-shadow: 0 0 0 3px rgba(56,189,248,.12);
+    }
+
     h1{font-size:40px;line-height:1.1;margin-bottom:10px}
     h2{margin-top:40px;font-size:28px}
     h3{margin-top:26px}
@@ -55,10 +107,20 @@
 
 <body>
 
+<!-- UPDATED HEADER: sticky nav with "return" links -->
 <header>
-  <div class="wrap">
-    <strong>Lakeside Gas Company Inc.</strong><br>
-    Licensed Gas Technician • Peterborough & Surrounding Areas
+  <div class="topbar">
+    <div class="brand">
+      Lakeside Gas Company Inc.
+      <small>Licensed Gas Technician • Peterborough &amp; Surrounding Areas</small>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="/" title="Back to Home">Home</a>
+      <a class="active" href="/inspection-services.html" title="Inspection Services">Inspections</a>
+      <a href="/maintenance-plans.html" title="Maintenance Plans">Maintenance</a>
+      <a href="/#contact" title="Contact Lakeside Gas">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -100,12 +162,12 @@ Our inspections are independent, pressure-free, and focused on safety and compli
 
 <div class="box">
   <h3>🔍 Basic Gas Safety Check</h3>
-  <p>Ideal for homeowners & seasonal cottages</p>
+  <p>Ideal for homeowners &amp; seasonal cottages</p>
   <ul>
-    <li>Visual inspection of gas piping & fittings</li>
+    <li>Visual inspection of gas piping &amp; fittings</li>
     <li>Leak detection (soap or electronic)</li>
     <li>Appliance condition check (up to 2 appliances)</li>
-    <li>Venting & combustion air visual review</li>
+    <li>Venting &amp; combustion air visual review</li>
     <li>Carbon monoxide safety check</li>
     <li>At-Risk / Immediately Dangerous tagging if required</li>
   </ul>
@@ -120,13 +182,13 @@ Request Pricing
 
 <div class="box">
   <h3>🏠 Residential Gas Inspection Report</h3>
-  <p>Ideal for homeowners & insurance requests</p>
+  <p>Ideal for homeowners &amp; insurance requests</p>
   <ul>
     <li>Full Basic Gas Safety Check</li>
     <li>Inspection of up to 3 gas appliances</li>
-    <li>Input rating & installation review</li>
-    <li>Vent connector & termination assessment</li>
-    <li>Shut-off valve & regulator verification</li>
+    <li>Input rating &amp; installation review</li>
+    <li>Vent connector &amp; termination assessment</li>
+    <li>Shut-off valve &amp; regulator verification</li>
     <li>Residential CSA B149 compliance review</li>
   </ul>
   <p><strong>Deliverables:</strong><br>
@@ -143,10 +205,10 @@ Request Pricing
   <h3>🧾 Real Estate / Pre-Purchase Gas Inspection</h3>
   <ul>
     <li>Inspection of all visible gas appliances</li>
-    <li>Gas piping routing & support review</li>
-    <li>Venting & combustion air assessment</li>
-    <li>CO & life-safety compliance check</li>
-    <li>Identification of code violations & safety risks</li>
+    <li>Gas piping routing &amp; support review</li>
+    <li>Venting &amp; combustion air assessment</li>
+    <li>CO &amp; life-safety compliance check</li>
+    <li>Identification of code violations &amp; safety risks</li>
   </ul>
   <p><strong>Deliverables:</strong><br>
   ✔ Realtor-friendly PDF report<br>
@@ -163,8 +225,8 @@ Request Pricing
   <ul>
     <li>Full gas system inspection</li>
     <li>All appliances checked</li>
-    <li>Leak testing & shut-off verification</li>
-    <li>Venting & CO safety review</li>
+    <li>Leak testing &amp; shut-off verification</li>
+    <li>Venting &amp; CO safety review</li>
   </ul>
   <p><strong>Deliverables:</strong><br>
   ✔ Dated Gas Safety Inspection Report<br>
@@ -176,13 +238,13 @@ Request Pricing
 </div>
 
 <div class="box">
-  <h3>🔥 BBQ & Outdoor Gas Inspection</h3>
+  <h3>🔥 BBQ &amp; Outdoor Gas Inspection</h3>
   <ul>
     <li>BBQ or outdoor appliance inspection</li>
-    <li>Gas line routing & support review</li>
-    <li>Shut-off & quick-disconnect verification</li>
+    <li>Gas line routing &amp; support review</li>
+    <li>Shut-off &amp; quick-disconnect verification</li>
     <li>Leak testing</li>
-    <li>Clearance & input review</li>
+    <li>Clearance &amp; input review</li>
   </ul>
  <a class="btn btnPrimary" href="mailto:lakesidegascompany@gmail.com?subject=Gas%20Inspection%20Pricing%20Request">
 Request Pricing
@@ -193,10 +255,10 @@ Request Pricing
 <div class="box">
   <h3>⚡ Generator Gas Supply Inspection</h3>
   <ul>
-    <li>Gas line & regulator inspection</li>
+    <li>Gas line &amp; regulator inspection</li>
     <li>Shut-off valve verification</li>
-    <li>Pipe sizing & pressure review (visual)</li>
-    <li>Clearance & safety assessment</li>
+    <li>Pipe sizing &amp; pressure review (visual)</li>
+    <li>Clearance &amp; safety assessment</li>
     <li>Leak testing</li>
   </ul>
  <a class="btn btnPrimary" href="mailto:lakesidegascompany@gmail.com?subject=Gas%20Inspection%20Pricing%20Request">
@@ -206,12 +268,12 @@ Request Pricing
 </div>
 
 <div class="box">
-  <h3>🌊 Cottage & Seasonal Opening Gas Inspection</h3>
+  <h3>🌊 Cottage &amp; Seasonal Opening Gas Inspection</h3>
   <ul>
     <li>Full gas system safety inspection</li>
     <li>All appliances checked</li>
-    <li>Freeze & corrosion damage review</li>
-    <li>CO & combustion air assessment</li>
+    <li>Freeze &amp; corrosion damage review</li>
+    <li>CO &amp; combustion air assessment</li>
     <li>Start-of-season readiness check</li>
   </ul>
  <a class="btn btnPrimary" href="mailto:lakesidegascompany@gmail.com?subject=Gas%20Inspection%20Pricing%20Request">
@@ -223,12 +285,12 @@ Request Pricing
 <h2>Optional Add-Ons</h2>
 <ul>
   <li>Additional appliance inspections</li>
-  <li>Carbon monoxide detector supply & installation</li>
+  <li>Carbon monoxide detector supply &amp; installation</li>
   <li>Minor gas leak repairs</li>
   <li>Annual inspection reminder program</li>
 </ul>
 
-<h2>Compliance & Disclosure</h2>
+<h2>Compliance &amp; Disclosure</h2>
 <p>
 Inspections are performed by a licensed Gas Technician in accordance with applicable sections of CSA B149.
 This service does not replace inspections performed by the Technical Standards and Safety Authority where required.
@@ -252,4 +314,3 @@ Book a Gas Inspection
 
 </body>
 </html>
-
