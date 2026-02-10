@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lakeside Gas Company Incorporated | Generator Hook-Ups • BBQ Lines • Appliance Hook-Ups</title>
   <meta name="description" content="Lakeside Gas Company Incorporated — Generator hook-ups, BBQ gas lines, and appliance hook-ups. Serving Peterborough & Surrounding Areas." />
+
   <style>
     :root{
       --bg:#0b0f14;
@@ -24,7 +25,8 @@
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
     .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
-    /* Top strip like the reference sites: phone/email always visible */
+
+    /* Top strip like reference sites: phone/email always visible */
     .topstrip{
       background:#070a0f;
       border-bottom:1px solid var(--line);
@@ -38,26 +40,23 @@
     .topstrip a{color:var(--brand);font-weight:700}
     .topstrip .small{color:var(--muted)}
     .topstrip .right{display:flex;gap:14px;flex-wrap:wrap}
-/* Trust micro-bar under header */
-.trustbar{
-  background:rgba(15,23,34,.85);
-  border-bottom:1px solid var(--line);
-  font-size:13px;
-  color:var(--muted);
-}
-.trustbar .wrap{
-  padding:8px 18px;
-  display:flex;
-  justify-content:center;
-  text-align:center;
-  letter-spacing:.2px;
-}
+
+    /* Trust micro-bar under topstrip */
+    .trustbar{
+      background:rgba(15,23,34,.85);
+      border-bottom:1px solid var(--line);
+      font-size:13px;
+      color:var(--muted);
+    }
+    .trustbar .wrap{
+      padding:8px 18px;
+      display:flex;
+      justify-content:center;
+      text-align:center;
+      letter-spacing:.2px;
+    }
+
     /* Header */
-    <div class="trustbar">
-  <div class="wrap">
-    Licensed Gas Technician • Residential & Cottage Work • Serving Peterborough & Surrounding Areas
-  </div>
-</div>
     header{
       position:sticky;top:0;z-index:50;
       background:rgba(11,15,20,.80);
@@ -72,16 +71,9 @@
       display:flex;align-items:center;gap:12px;
       min-width: 240px;
     }
-    .mark{
-      width:42px;height:42px;border-radius:14px;
-      background:linear-gradient(135deg,var(--brand),var(--brand2));
-      display:grid;place-items:center;
-      color:#06101b;font-weight:900;letter-spacing:.5px;
-    }
-    .brand strong{display:block;line-height:1.1}
-    .brand span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
     nav a{color:var(--muted);font-weight:650;font-size:14px;margin-left:14px}
     nav a:hover{color:var(--text)}
+
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:12px 16px;border-radius:999px;border:1px solid var(--line);
@@ -96,6 +88,7 @@
       border:none;color:#06101b;
     }
     .btnRow{display:flex;gap:10px;flex-wrap:wrap}
+
     /* Hero */
     .hero{
       padding:44px 0 18px;
@@ -116,6 +109,7 @@
       background:rgba(255,255,255,.04);
       color:var(--muted);font-size:13px;
     }
+
     /* Panels / sections */
     section{padding:44px 0}
     .panel{
@@ -152,6 +146,7 @@
       background:rgba(255,255,255,.04);
       color:var(--muted);font-size:13px;
     }
+
     /* Quote/Contact */
     .contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
     @media (max-width: 980px){ .contactGrid{grid-template-columns:1fr} }
@@ -174,33 +169,58 @@
       font-size:13px;
     }
     .footerRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    /* TSSA footer badge */
-.tssaBadge img{
-  height:80px;
-  width:auto;
-}
-    /* HEADER LOGO sizing */
-.brand img{
-  max-width:none;
-}
 
-.logo{
-  height:100px;
-  width:auto;
-  max-height:100px;
-  display:block;
-}
-@media (max-width:520px){
-  .logo{
-    height:100px;
-    max-height:100px;
-  }
-}
+    /* TSSA footer badge */
+    .tssaBadge img{
+      height:80px;
+      width:auto;
+    }
+
+    /* Header logo sizing */
+    .brand img{max-width:none;}
+    .logo{
+      height:100px;
+      width:auto;
+      max-height:100px;
+      display:block;
+    }
+    @media (max-width:520px){
+      .logo{height:100px;max-height:100px;}
+    }
+
+    /* Return-to-top floating button */
+    #toTop{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:48px;
+      height:48px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#06101b;
+      font-weight:900;
+      font-size:20px;
+      cursor:pointer;
+      box-shadow:0 18px 60px rgba(0,0,0,.55);
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(10px);
+      transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+      z-index:9999;
+    }
+    #toTop.show{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+    #toTop:hover{transform:translateY(-3px);}
+    #toTop:active{transform:translateY(0);}
   </style>
 </head>
 
 <body>
-  <!-- Top contact strip (like the reference sites) -->
+  <!-- Top contact strip -->
   <div class="topstrip">
     <div class="wrap">
       <div class="small">Serving Peterborough & Surrounding Areas • Spring/Summer bookings</div>
@@ -211,10 +231,17 @@
     </div>
   </div>
 
+  <!-- Trust micro-bar (this was incorrectly inside your CSS before) -->
+  <div class="trustbar">
+    <div class="wrap">
+      Licensed Gas Technician • Residential & Cottage Work • Serving Peterborough & Surrounding Areas
+    </div>
+  </div>
+
   <header>
     <div class="wrap nav">
       <div class="brand">
-       <img src="LakesidegascoLOGOS(1)(2).png" alt="Lakeside Gas Company logo" class="logo">
+        <img src="LakesidegascoLOGOS(1)(2).png" alt="Lakeside Gas Company logo" class="logo">
       </div>
 
       <nav>
@@ -224,15 +251,14 @@
         <a href="#areas">Service Area</a>
         <a href="#why">Why Us</a>
         <a href="#quote">Get a Quote</a>
-        <a class="btn" href="https://www.instagram.com/lakesidegascompany/" target="_blank" rel="noopener">
-  Instagram
-</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="https://www.instagram.com/lakesidegascompany/" target="_blank" rel="noopener">Instagram</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO: big headline + clear CTA like both sites -->
+    <!-- HERO -->
     <section class="hero">
       <div class="wrap heroGrid">
         <div>
@@ -301,7 +327,7 @@
       </div>
     </section>
 
-    <!-- SERVICES grid (like Faubert’s service tiles) -->
+    <!-- SERVICES -->
     <section id="services">
       <div class="wrap">
         <h2>Services</h2>
@@ -330,7 +356,7 @@
       </div>
     </section>
 
-    <!-- SERVICE AREA (both sites highlight area) -->
+    <!-- SERVICE AREA -->
     <section id="areas" class="alt">
       <div class="wrap">
         <h2>Service Area</h2>
@@ -350,7 +376,7 @@
       </div>
     </section>
 
-    <!-- TRUST section (simi980pxlar to “satisfaction guarantee / why us” blocks) -->
+    <!-- WHY US -->
     <section id="why">
       <div class="wrap">
         <h2>Why Lakeside Gas</h2>
@@ -373,19 +399,16 @@
 
         <div class="panel" style="margin-top:14px">
           <h3 style="margin:0 0 8px">Reviews</h3>
-          <p class="muted" style="margin:0 0 10px">
-          </p>
           <ul class="list">
-            <li>“Showed up on time and kept everything clean.” Jesse of Ennismore</li>
-            <li>“Explained the work clearly — no surprises.” Steve of Peterborough</li>
-            <li>“Generator hookup looks professional and tidy.” - Barb of Lakehurst</li>
+            <li>“Showed up on time and kept everything clean.” — Jesse (Ennismore)</li>
+            <li>“Explained the work clearly — no surprises.” — Steve (Peterborough)</li>
+            <li>“Generator hookup looks professional and tidy.” — Barb (Lakehurst)</li>
           </ul>
-          </p>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT / QUOTE (like Marshall’s “Get a Free Quote” section) -->
+    <!-- QUOTE -->
     <section id="quote" class="alt">
       <div class="wrap contactGrid">
         <div class="panel">
@@ -421,32 +444,50 @@ Photos (if available):
         </div>
       </div>
     </section>
+
+    <!-- CONTACT (added cleanly inside the page) -->
+    <section id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p class="muted">Call/text is fastest. Email anytime.</p>
+
+        <div class="btnRow">
+          <a class="btn btnPrimary" href="tel:+17058080353">Call / Text 705-808-0353</a>
+          <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Lakeside%20Gas%20Service%20Request">Email Lakeside Gas</a>
+        </div>
+
+        <p class="fine" style="margin-top:14px;">
+          Phone/Text: <strong style="color:var(--text)">705-808-0353</strong> •
+          Email: <strong style="color:var(--text)">lakesidegascompany@gmail.com</strong>
+        </p>
+      </div>
+    </section>
   </main>
 
- <footer>
-  <div class="wrap footerRow">
-    <div>
-      <strong style="color:var(--text)">Lakeside Gas Company Incorporated</strong>
-      <div>Phone/Text: 705-808-0353 • lakesidegascompany@gmail.com</div>
+  <footer>
+    <div class="wrap footerRow">
+      <div>
+        <strong style="color:var(--text)">Lakeside Gas Company Incorporated</strong>
+        <div>Phone/Text: 705-808-0353 • lakesidegascompany@gmail.com</div>
+      </div>
+      <div>© <span id="yr"></span> Lakeside Gas Company Incorporated</div>
     </div>
 
-    <div>© <span id="yr"></span> Lakeside Gas Company Incorporated</div>
-  </div>
-
-  <!-- TSSA badge at the very bottom -->
-  <div class="wrap" style="text-align:center; margin-top:14px;">
-    <div class="tssaBadge" style="justify-content:center;">
-      <img src="tssa-logo.png" alt="TSSA – Technical Standards and Safety Authority">
+    <!-- TSSA badge at the very bottom -->
+    <div class="wrap" style="text-align:center; margin-top:14px;">
+      <div class="tssaBadge" style="justify-content:center;">
+        <img src="tssa-logo.png" alt="TSSA – Technical Standards and Safety Authority">
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-
+  <!-- Return to top button -->
+  <button id="toTop" aria-label="Return to top" title="Return to top">↑</button>
 
   <script>
     document.getElementById("yr").textContent = new Date().getFullYear();
 
-    // “Mailto form” (still $0)
+    // “Mailto form” ($0)
     document.getElementById("quoteForm").addEventListener("submit", function(e){
       e.preventDefault();
       const fd = new FormData(e.target);
@@ -461,51 +502,16 @@ Photos (if available):
       window.location.href = `mailto:lakesidegascompany@gmail.com?subject=${subject}&body=${body}`;
       e.target.reset();
     });
+
+    // Return-to-top button
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 320) toTop.classList.add("show");
+      else toTop.classList.remove("show");
+    });
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   </script>
-</body>
-</html>
-<li>Outdoor BBQ gas line installations</li>
-<li>Gas fireplace installs & service</li>
-<li>Gas appliance hook-ups</li>
-<li>Propane systems & Propane line work</li>
-<li>Generator hook-ups</li>
-<li>Gas service, repairs & maintenance</li>
-</ul>
-</section>
-
-<section class="box">
-<h2>Service Area</h2>
-<p>
-Peterborough • Lakefield • Buckhorn • Bridgenorth • Trent Hills • Warkworth • Kawarthas • Norwood • Cavan • Selwyn • Surrounding Area
-</p>
-</section>
-
-<section class="box" id="contact">
-<h2>Contact</h2>
-<p>
-📞 Phone: <strong>705-808-0353</strong><br>
-✉️ Email: <strong>lakesidegascompany@gmail.com</strong>
-</p>
-
-<p>Click below to email us directly:</p>
-<a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Lakeside%20Gas%20Service%20Request">
-Email Lakeside Gas
-</a>
-</section>
-
-<div class="footer">
-  <div>
-  <strong style="color:var(--text)">Lakeside Gas Company Incorporated</strong>
-  <div>
-    Phone/Text: 705-808-0353 • lakesidegascompany@gmail.com •
-    <a href="https://www.instagram.com/lakesidegascompanyinc/" 
-       target="_blank" 
-       rel="noopener">
-       📸 Instagram
-    </a>
-  </div>
-© 2026 Lakeside Gas Company Incorporated
-</div>
-
 </body>
 </html>
