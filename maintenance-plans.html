@@ -1,12 +1,152 @@
-<section id="maintenance-plans">
-  <header>
-    <h1>Gas Appliance Maintenance Plans</h1>
-    <p><strong>Preventive Care • Priority Service • Peace of Mind</strong></p>
-  </header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maintenance Plans | Lakeside Gas Company Inc.</title>
+  <meta name="description" content="Gas appliance maintenance plans for homeowners and cottages. Preventive care, priority booking, and discounts on service." />
+
+  <style>
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:#0b0f14;
+      color:#e8eef6;
+      line-height:1.65;
+    }
+    a{color:#38bdf8;text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:32px 18px}
+
+    /* Sticky header + nav (same approach as your inspections page upgrade) */
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(11,15,20,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 18px;
+      max-width:980px;
+      margin:0 auto;
+    }
+    .brand{
+      font-weight:800;
+      letter-spacing:.2px;
+      line-height:1.15;
+    }
+    .brand small{
+      display:block;
+      font-weight:600;
+      color:#aab6c5;
+      margin-top:4px;
+    }
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      color:#e8eef6;
+      font-weight:700;
+      font-size:14px;
+    }
+    .nav a:hover{border-color:rgba(56,189,248,.55)}
+    .nav a.active{
+      border-color:rgba(56,189,248,.75);
+      box-shadow:0 0 0 3px rgba(56,189,248,.12);
+    }
+
+    h1{font-size:40px;line-height:1.1;margin-bottom:10px}
+    h2{margin-top:40px;font-size:28px}
+    h3{margin-top:26px}
+    p{color:#aab6c5}
+    ul{color:#aab6c5;padding-left:18px}
+
+    .box{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:16px;
+      padding:20px;
+      margin-top:22px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:18px;
+      padding:14px 20px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#38bdf8,#60a5fa);
+      color:#06101b;
+      font-weight:800;
+    }
+
+    .compare{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:14px;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.04);
+    }
+    .compare th,.compare td{
+      padding:12px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      vertical-align:top;
+    }
+    .compare th{
+      text-align:left;
+      color:#e8eef6;
+      background:rgba(255,255,255,.03);
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.1);
+      margin-top:50px;
+      padding:24px 0;
+      font-size:13px;
+      color:#aab6c5;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="brand">
+      Lakeside Gas Company Inc.
+      <small>Licensed Gas Technician • Peterborough &amp; Surrounding Areas</small>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/inspection-services.html">Inspections</a>
+      <a class="active" href="/maintenance-plans.html">Maintenance</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h1>Gas Appliance Maintenance Plans</h1>
+  <p><strong>Preventive Care • Priority Service • Peace of Mind</strong></p>
 
   <p>
-    At <strong>Lakeside Gas Company Inc.</strong>, our maintenance plans are designed to keep your gas appliances running
-    safely, reliably, and efficiently—without the stress of emergency breakdowns or long wait times.
+    At Lakeside Gas Company Inc., our maintenance plans are designed to keep your gas appliances running safely, reliably,
+    and efficiently—without the stress of emergency breakdowns or long wait times.
   </p>
 
   <p>
@@ -14,95 +154,146 @@
   </p>
 
   <p>
-    All maintenance is performed by a licensed Gas Technician in accordance with applicable sections of
-    <strong>:contentReference[oaicite:0]{index=0}</strong>.
+    All maintenance is performed by a licensed Gas Technician in accordance with applicable sections of CSA B149.
   </p>
 
-  <hr />
+  <h2>Inspection vs Maintenance</h2>
+  <p>Not sure which you need? Here’s the difference:</p>
 
-  <h2>🔧 What Maintenance Means (Plain English)</h2>
+  <div style="overflow-x:auto;">
+    <table class="compare" aria-label="Inspection vs Maintenance comparison">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Gas Inspection</th>
+          <th>Maintenance Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Purpose</td>
+          <td>One-time safety &amp; condition evaluation</td>
+          <td>Ongoing preventive care</td>
+        </tr>
+        <tr>
+          <td>Written Report</td>
+          <td>✅ Yes (report packages)</td>
+          <td>❌ No formal report</td>
+        </tr>
+        <tr>
+          <td>Tune-up / Cleaning</td>
+          <td>❌ Not included</td>
+          <td>✅ Included</td>
+        </tr>
+        <tr>
+          <td>Priority Booking</td>
+          <td>❌ No</td>
+          <td>✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Best For</td>
+          <td>Real estate, insurance, peace-of-mind checks</td>
+          <td>Reliability, fewer breakdowns, front-of-line service</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <p>Maintenance is ongoing care, not paperwork.</p>
+  <div class="box">
+    <h2>🔧 What Maintenance Means (Plain English)</h2>
+    <p>Maintenance is ongoing care, not paperwork. It focuses on:</p>
+    <ul>
+      <li>Appliance performance &amp; reliability</li>
+      <li>Early detection of wear or issues</li>
+      <li>Reduced ignition and combustion problems</li>
+      <li>Priority access to service when you need it</li>
+    </ul>
+    <p>
+      Maintenance plans do <strong>not</strong> replace gas safety inspections, real estate inspections, or regulatory inspections.
+    </p>
+  </div>
 
-  <p>It focuses on:</p>
-  <ul>
-    <li>Appliance performance &amp; reliability</li>
-    <li>Early detection of wear or issues</li>
-    <li>Reduced ignition and combustion problems</li>
-    <li>Priority access to service when you need it</li>
-  </ul>
+  <h2>Maintenance Plans</h2>
 
+  <div class="box">
+    <h3>🟦 HomeCare Maintenance Plan</h3>
+    <p><strong>Best for:</strong> Single-family homes &amp; year-round residences</p>
+    <ul>
+      <li>Annual gas appliance tune-up (1 appliance)</li>
+      <li>Burner cleaning</li>
+      <li>Ignition &amp; flame verification</li>
+      <li>Safety control function check</li>
+      <li>Appliance-area leak check</li>
+      <li>Carbon monoxide safety check</li>
+      <li>Priority booking ahead of non-members</li>
+      <li>10% discount on labour for repairs or service calls</li>
+    </ul>
+    <p><strong>Pricing:</strong> $19/month or $199/year</p>
+
+    <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Maintenance%20Plan%20-%20HomeCare%20Signup">
+      Join HomeCare
+    </a>
+  </div>
+
+  <div class="box">
+    <h3>🌊 Cottage &amp; Seasonal Care Plan</h3>
+    <p><strong>Best for:</strong> Cottages, seasonal homes, Airbnb properties</p>
+    <p>Designed for properties that sit unused part of the year.</p>
+    <ul>
+      <li>One seasonal service visit (spring start-up <strong>OR</strong> fall shutdown)</li>
+      <li>Appliance function checks</li>
+      <li>Burner cleaning (1 appliance)</li>
+      <li>Visual check for freeze or corrosion damage</li>
+      <li>Outdoor gas line visual check (BBQ or generator)</li>
+      <li>Priority scheduling during peak season</li>
+      <li>10% labour discount</li>
+    </ul>
+    <p><strong>Pricing:</strong> $29/month or $299/year</p>
+
+    <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Maintenance%20Plan%20-%20Cottage%20Seasonal%20Care%20Signup">
+      Join Seasonal Care
+    </a>
+  </div>
+
+  <div class="box">
+    <h3>⭐ Priority Plus Maintenance Plan</h3>
+    <p><strong>Best for:</strong> High-value homes, landlords, zero-hassle customers</p>
+    <p>Our top-tier membership for customers who want fast access and fewer surprises.</p>
+    <ul>
+      <li>Annual appliance tune-up (1 appliance)</li>
+      <li>Burner cleaning &amp; ignition verification</li>
+      <li>One priority service call included <br><small>(Labour only, up to 60 minutes)</small></li>
+      <li>Front-of-line scheduling</li>
+      <li>15% discount on labour</li>
+      <li>Free upgrade or replacement quotes</li>
+    </ul>
+    <p><strong>Pricing:</strong> $39/month or $429/year</p>
+
+    <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Maintenance%20Plan%20-%20Priority%20Plus%20Signup">
+      Join Priority Plus
+    </a>
+  </div>
+
+  <h2>Compliance Note</h2>
   <p>
-    Maintenance plans do <strong>not</strong> replace gas safety inspections, real estate inspections,
-    or regulatory inspections.
+    Maintenance plans are preventive service memberships and do not replace inspections performed by the Technical Standards and Safety Authority (TSSA) where required.
   </p>
 
-  <hr />
+  <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Maintenance%20Plans%20Question">
+    Ask About Maintenance Plans
+  </a>
 
-  <h2>🟦 HomeCare Maintenance Plan</h2>
-  <p><strong>Best for:</strong> Single-family homes &amp; year-round residences</p>
+</main>
 
-  <h3>Includes:</h3>
-  <ul>
-    <li>Annual gas appliance tune-up (1 appliance)</li>
-    <li>Burner cleaning</li>
-    <li>Ignition &amp; flame verification</li>
-    <li>Safety control function check</li>
-    <li>Appliance-area leak check</li>
-    <li>Carbon monoxide safety check</li>
-    <li>Priority booking ahead of non-members</li>
-    <li>10% discount on labour for repairs or service calls</li>
-  </ul>
+<footer>
+  <div class="wrap">
+    © <span id="yr"></span> Lakeside Gas Company Inc. • 705-808-0353 • lakesidegascompany@gmail.com
+  </div>
+</footer>
 
-  <p><strong>Pricing:</strong><br />
-    $19/month or $199/year
-  </p>
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
 
-  <hr />
-
-  <h2>🌊 Cottage &amp; Seasonal Care Plan</h2>
-  <p><strong>Best for:</strong> Cottages, seasonal homes, Airbnb properties</p>
-
-  <p>Designed for properties that sit unused part of the year.</p>
-
-  <h3>Includes:</h3>
-  <ul>
-    <li>One seasonal service visit (spring start-up <strong>OR</strong> fall shutdown)</li>
-    <li>Appliance function checks</li>
-    <li>Burner cleaning (1 appliance)</li>
-    <li>Visual check for freeze or corrosion damage</li>
-    <li>Outdoor gas line visual check (BBQ or generator)</li>
-    <li>Priority scheduling during peak season</li>
-    <li>10% labour discount</li>
-  </ul>
-
-  <p><strong>Pricing:</strong><br />
-    $29/month or $299/year
-  </p>
-
-  <hr />
-
-  <h2>⭐ Priority Plus Maintenance Plan</h2>
-  <p><strong>Best for:</strong> High-value homes, landlords, zero-hassle customers</p>
-
-  <p>
-    Our top-tier maintenance membership for customers who want fast access and fewer surprises.
-  </p>
-
-  <h3>Includes:</h3>
-  <ul>
-    <li>Annual appliance tune-up (1 appliance)</li>
-    <li>Burner cleaning &amp; ignition verification</li>
-    <li>
-      One priority service call included<br />
-      <small>(Labour only, up to 60 minutes)</small>
-    </li>
-    <li>Front-of-line scheduling</li>
-    <li>15% discount on labour</li>
-    <li>Free upgrade or replacement quotes</li>
-  </ul>
-
-  <p><strong>Pricing:</strong><br />
-    $39/month or $429/year
-  </p>
-</section>
+</body>
+</html>
