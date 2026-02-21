@@ -1,298 +1,313 @@
-<section class="careers" aria-labelledby="careersTitle">
-  <div class="careers__wrap">
-    <header class="careers__header">
-      <h1 id="careersTitle" class="careers__title">Careers</h1>
-      <p class="careers__subtitle">
-        Join Lakeside Gas Company Inc. We’re expanding our residential mechanical services across Peterborough &amp; surrounding areas.
-      </p>
-    </header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers | Lakeside Gas Company Incorporated</title>
+  <meta name="description" content="Careers at Lakeside Gas Company Incorporated. Apply for 313D Application (Apprentice/Mechanic) or WETT Certified Technician." />
 
-    <!-- quick apply bar -->
-    <div class="careers__applybar" role="region" aria-label="How to apply">
-      <div class="careers__applybarLeft">
-        <strong>Apply by email:</strong>
-        <a class="careers__email" href="mailto:lakesidegascompany@gmail.com">lakesidegascompany@gmail.com</a>
-      </div>
-      <div class="careers__applybarRight">
-        <span class="careers__pill">Peterborough + Surrounding Areas</span>
-        <span class="careers__pill">Full-Time / Contract</span>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1722;
+      --panel2:#0c121b;
+      --line:rgba(255,255,255,.10);
+      --text:#e8eef6;
+      --muted:#aab6c5;
+      --brand:#38bdf8;
+      --brand2:#60a5fa;
+      --shadow: 0 18px 60px rgba(0,0,0,.50);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+
+    /* Top strip */
+    .topstrip{
+      background:#070a0f;
+      border-bottom:1px solid var(--line);
+      font-size:14px;
+    }
+    .topstrip .wrap{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:10px;padding:10px 18px;flex-wrap:wrap;
+    }
+    .topstrip a{color:var(--brand);font-weight:700}
+    .topstrip .small{color:var(--muted)}
+    .topstrip .right{display:flex;gap:14px;flex-wrap:wrap}
+
+    /* Trust micro-bar */
+    .trustbar{
+      background:rgba(15,23,34,.85);
+      border-bottom:1px solid var(--line);
+      font-size:13px;
+      color:var(--muted);
+    }
+    .trustbar .wrap{
+      padding:8px 18px;
+      display:flex;
+      justify-content:center;
+      text-align:center;
+      letter-spacing:.2px;
+    }
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(11,15,20,.80);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;padding:14px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      min-width: 240px;
+    }
+    nav a{color:var(--muted);font-weight:650;font-size:14px;margin-left:14px}
+    nav a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      font-weight:800;font-size:14px;
+      transition:transform .06s ease, opacity .2s ease;
+      white-space:nowrap;
+      cursor:pointer;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btnPrimary{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      border:none;color:#06101b;
+    }
+    .btnRow{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* Logo sizing */
+    .brand img{max-width:none;}
+    .logo{height:100px;width:auto;max-height:100px;display:block;}
+    @media (max-width:520px){ .logo{height:100px;max-height:100px;} }
+
+    /* Page */
+    main{padding:44px 0}
+    .hero{
+      padding:34px 0 10px;
+      background:
+        radial-gradient(900px 420px at 10% 0%, rgba(56,189,248,.20), transparent 55%),
+        radial-gradient(900px 420px at 90% 0%, rgba(96,165,250,.16), transparent 55%);
+    }
+    .kicker{color:var(--muted);margin:0 0 10px;font-size:13px}
+    h1{margin:0 0 10px;font-size:40px;line-height:1.05;letter-spacing:-.7px}
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .lead{margin:0 0 18px;color:var(--muted);line-height:1.65;max-width:70ch}
+
+    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;align-items:start}
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr} }
+
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    h2{margin:0 0 10px;font-size:26px;letter-spacing:-.3px}
+    .muted{color:var(--muted);line-height:1.65;margin:0 0 16px}
+
+    .role{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.03);
+      padding:16px;
+      margin-top:12px;
+    }
+    .role h3{margin:0 0 6px}
+    .role ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
+
+    label{display:block;margin-bottom:10px}
+    label span{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}
+    input, textarea, select{
+      width:100%;padding:12px 12px;border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(5,8,12,.65);
+      color:var(--text);outline:none;
+      font-size:14px;
+    }
+    textarea{resize:vertical}
+    .fine{color:var(--muted);font-size:12px;line-height:1.5;margin-top:10px}
+
+    footer{
+      padding:26px 0;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
+    }
+    .footerRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  </style>
+</head>
+
+<body>
+  <div class="topstrip">
+    <div class="wrap">
+      <div class="small">Serving Peterborough & Surrounding Areas • Hiring</div>
+      <div class="right">
+        <div>Call/Text: <a href="tel:+17058080353">705-808-0353</a></div>
+        <div>Email: <a href="mailto:lakesidegascompany@gmail.com">lakesidegascompany@gmail.com</a></div>
       </div>
     </div>
-
-    <!-- =========================
-      JOB 1 — 313D
-    ========================= -->
-    <article class="job" aria-labelledby="job-313d-title">
-      <div class="job__top">
-        <div>
-          <h2 id="job-313d-title" class="job__title">313D Residential Air Conditioning Mechanic</h2>
-          <p class="job__meta">
-            <span><strong>Location:</strong> Peterborough &amp; Surrounding Areas</span>
-            <span class="job__dot" aria-hidden="true">•</span>
-            <span><strong>Type:</strong> Full-Time / Contract (Flexible Structure)</span>
-          </p>
-        </div>
-        <a class="job__applyBtn" href="mailto:lakesidegascompany@gmail.com?subject=313D%20Application%20%E2%80%93%20%5BYour%20Name%5D">
-          Apply
-        </a>
-      </div>
-
-      <div class="job__section">
-        <h3>About Lakeside</h3>
-        <p>
-          Lakeside Gas Company Inc. is a licensed residential gas and mechanical services company serving Peterborough and surrounding areas.
-          We specialize in gas line installations, generator hook-ups, appliance installations, inspections, and mechanical system upgrades.
-          As we expand our residential HVAC division, we are seeking a licensed <strong>313D</strong> to join our growing team.
-        </p>
-      </div>
-
-      <div class="job__grid">
-        <section class="job__card" aria-labelledby="job-313d-overview">
-          <h3 id="job-313d-overview">Position Overview</h3>
-          <p>
-            Install, service, maintain, and troubleshoot residential HVAC equipment including air conditioners, heat pumps, and related components.
-            Work alongside other skilled trades to deliver clean, code-compliant installations and professional customer experiences.
-          </p>
-        </section>
-
-        <section class="job__card" aria-labelledby="job-313d-required">
-          <h3 id="job-313d-required">Required Qualifications</h3>
-          <ul>
-            <li>Valid <strong>313D Residential Air Conditioning Mechanic</strong> License (Ontario)</li>
-            <li>Valid <strong>ODP</strong> Certification</li>
-            <li>Valid G Driver’s License (clean abstract preferred)</li>
-            <li>2+ years field experience (preferred)</li>
-            <li>Strong understanding of diagnostics, brazing, line sets, and commissioning</li>
-            <li>Ability to read mechanical drawings and manufacturer manuals</li>
-            <li>Working knowledge of TSSA/ESA coordination when required</li>
-          </ul>
-        </section>
-
-        <section class="job__card" aria-labelledby="job-313d-preferred">
-          <h3 id="job-313d-preferred">Preferred (Assets)</h3>
-          <ul>
-            <li>313A (asset)</li>
-            <li>Gas Technician License (asset)</li>
-            <li>Working at Heights</li>
-            <li>WHMIS</li>
-            <li>First Aid / CPR</li>
-          </ul>
-        </section>
-
-        <section class="job__card" aria-labelledby="job-313d-resp">
-          <h3 id="job-313d-resp">Core Responsibilities</h3>
-          <ul>
-            <li>Residential A/C and heat pump installations</li>
-            <li>System start-ups, performance testing, and commissioning</li>
-            <li>Refrigerant recovery, charging, and leak diagnostics</li>
-            <li>Service and troubleshooting calls</li>
-            <li>Customer education and walkthrough at job completion</li>
-            <li>Maintain a clean, organized, safe job site</li>
-            <li>Accurate documentation of work performed</li>
-          </ul>
-        </section>
-      </div>
-
-      <div class="job__footer">
-        <p class="job__howto">
-          <strong>How to apply:</strong> Email your resume to
-          <a href="mailto:lakesidegascompany@gmail.com?subject=313D%20Application%20%E2%80%93%20%5BYour%20Name%5D">lakesidegascompany@gmail.com</a>
-          with the subject line: <em>313D Application – [Your Name]</em>.
-        </p>
-      </div>
-    </article>
-
-    <!-- =========================
-      JOB 2 — WETT
-    ========================= -->
-    <article class="job" aria-labelledby="job-wett-title">
-      <div class="job__top">
-        <div>
-          <h2 id="job-wett-title" class="job__title">WETT Certified Technician — Installations &amp; Inspections</h2>
-          <p class="job__meta">
-            <span><strong>Location:</strong> Peterborough &amp; Surrounding Areas</span>
-            <span class="job__dot" aria-hidden="true">•</span>
-            <span><strong>Type:</strong> Full-Time / Contract</span>
-          </p>
-        </div>
-        <a class="job__applyBtn" href="mailto:lakesidegascompany@gmail.com?subject=WETT%20Technician%20Application%20%E2%80%93%20%5BYour%20Name%5D">
-          Apply
-        </a>
-      </div>
-
-      <div class="job__section">
-        <h3>About the Role</h3>
-        <p>
-          Lakeside Gas Company Inc. is expanding into solid-fuel appliance installs and inspections. We’re seeking a
-          <strong>WETT Certified Technician</strong> to complete wood-burning appliance installations, venting systems, and WETT inspections
-          with high documentation standards and safety-first execution.
-        </p>
-      </div>
-
-      <div class="job__grid">
-        <section class="job__card" aria-labelledby="job-wett-required">
-          <h3 id="job-wett-required">Required Qualifications</h3>
-          <ul>
-            <li>Active <strong>WETT Certification</strong> in good standing (Installer and/or Inspector designation required)</li>
-            <li>Valid driver’s license</li>
-            <li>2+ years experience with wood stoves, inserts, chimneys, liners, and venting systems</li>
-            <li>Strong understanding of clearances, hearth protection, and solid-fuel venting principles</li>
-            <li>Ability to conduct Level 1 &amp; Level 2 inspections and produce detailed inspection reports</li>
-            <li>Ability to identify code deficiencies, safety risks, and provide clear corrective recommendations</li>
-          </ul>
-        </section>
-
-        <section class="job__card" aria-labelledby="job-wett-preferred">
-          <h3 id="job-wett-preferred">Preferred (Assets)</h3>
-          <ul>
-            <li>Gas Technician License (asset)</li>
-            <li>Working at Heights / Fall Protection</li>
-            <li>WHMIS</li>
-            <li>First Aid / CPR</li>
-          </ul>
-        </section>
-
-        <section class="job__card" aria-labelledby="job-wett-resp">
-          <h3 id="job-wett-resp">Core Responsibilities</h3>
-          <ul>
-            <li>Install wood-burning appliances and associated venting systems</li>
-            <li>Chimney liner installations and venting upgrades</li>
-            <li>Clearance verification and corrections (as required)</li>
-            <li>Level 1 and Level 2 WETT inspections</li>
-            <li>Issue formal inspection documentation and photo records</li>
-            <li>Maintain clean job sites and professional customer communication</li>
-            <li>Coordinate with other trades when required for complete scope delivery</li>
-          </ul>
-        </section>
-
-        <section class="job__card" aria-labelledby="job-wett-standards">
-          <h3 id="job-wett-standards">Standards &amp; Compliance</h3>
-          <p>
-            All work must follow manufacturer installation instructions and applicable Ontario requirements, and be executed to WETT inspection
-            and reporting standards with clear documentation for homeowners, insurers, and real estate transactions (when applicable).
-          </p>
-        </section>
-      </div>
-
-      <div class="job__footer">
-        <p class="job__howto">
-          <strong>How to apply:</strong> Email your resume to
-          <a href="mailto:lakesidegascompany@gmail.com?subject=WETT%20Technician%20Application%20%E2%80%93%20%5BYour%20Name%5D">lakesidegascompany@gmail.com</a>
-          with the subject line: <em>WETT Technician Application – [Your Name]</em>.
-        </p>
-      </div>
-    </article>
-
-    <!-- =========================
-      WHY JOIN
-    ========================= -->
-    <section class="careers__why" aria-labelledby="whyJoinTitle">
-      <h2 id="whyJoinTitle">Why Join Lakeside</h2>
-      <p>
-        We’re building a multi-division residential mechanical company focused on safety-first service, clean installations,
-        and consistent documentation. We value tradespeople who take pride in their craft and want to build something long-term.
-      </p>
-    </section>
   </div>
 
-  <!-- minimal scoped styling -->
-  <style>
-    .careers{ padding: clamp(18px, 3vw, 34px) 0; }
-    .careers__wrap{
-      width: min(1050px, 92vw);
-      margin: 0 auto;
-    }
-    .careers__header{ margin-bottom: 16px; }
-    .careers__title{ font-size: clamp(28px, 4vw, 44px); margin: 0 0 6px; letter-spacing: .2px; }
-    .careers__subtitle{ margin: 0; opacity: .85; max-width: 70ch; line-height: 1.6; }
+  <div class="trustbar">
+    <div class="wrap">
+      Licensed Gas Technician • Residential & Cottage Work • Professional, clean installs
+    </div>
+  </div>
 
-    .careers__applybar{
-      display:flex; gap: 12px; justify-content: space-between; align-items: center;
-      padding: 14px 16px; border: 1px solid rgba(255,255,255,.10);
-      border-radius: 16px; margin: 18px 0 22px;
-      background: rgba(255,255,255,.03);
-      flex-wrap: wrap;
-    }
-    .careers__email{ text-decoration: none; border-bottom: 1px dotted currentColor; }
-    .careers__pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 7px 10px; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      font-size: 14px; opacity: .9;
-    }
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <a href="/index.html" aria-label="Home">
+          <img src="LakesidegascoLOGOS(1)(2).png" alt="Lakeside Gas Company logo" class="logo">
+        </a>
+      </div>
 
-    .job{
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 18px;
-      padding: 18px;
-      background: rgba(255,255,255,.02);
-      box-shadow: 0 12px 40px rgba(0,0,0,.20);
-      margin-bottom: 18px;
-    }
-    .job__top{
-      display:flex; justify-content: space-between; align-items: flex-start; gap: 12px;
-      padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.08);
-      flex-wrap: wrap;
-    }
-    .job__title{ margin: 0 0 6px; font-size: clamp(18px, 2.2vw, 26px); }
-    .job__meta{ margin:0; opacity:.85; display:flex; flex-wrap: wrap; gap: 10px; }
-    .job__dot{ opacity:.6; }
+      <nav>
+        <a href="/index.html#services">Services</a>
+        <a href="/inspections.html">Inspections</a>
+        <a href="/maintenance-plans.html">Maintenance</a>
+        <a href="/careers.html" style="color:var(--text);">Careers</a>
+        <a href="/index.html#quote">Get a Quote</a>
+        <a class="btn" href="https://www.instagram.com/lakesidegascompany/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
 
-    .job__applyBtn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 10px 14px; border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.16);
-      text-decoration:none;
-      background: rgba(56,189,248,.10); /* subtle brand tint; adjust if needed */
-      font-weight: 600;
-      min-width: 92px;
-    }
-    .job__applyBtn:hover{ filter: brightness(1.08); }
+  <main class="hero">
+    <div class="wrap">
+      <p class="kicker">Careers</p>
+      <h1>Join Lakeside.</h1>
+      <p class="lead">
+        We’re building a professional team that values safety, clean work, and clear communication.
+        Apply below — if it’s a fit, we’ll reach out.
+      </p>
 
-    .job__section{ padding: 14px 0 6px; }
-    .job__section h3{ margin: 0 0 8px; font-size: 16px; }
-    .job__section p{ margin: 0; opacity: .92; line-height: 1.65; }
+      <div class="grid">
+        <div class="panel">
+          <h2>Open positions</h2>
+          <p class="muted">Currently accepting applications for the roles below.</p>
 
-    .job__grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 12px;
-      margin-top: 10px;
-    }
-    .job__card{
-      grid-column: span 6;
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 16px;
-      padding: 14px 14px 12px;
-      background: rgba(255,255,255,.02);
-    }
-    .job__card h3{ margin: 0 0 8px; font-size: 15px; }
-    .job__card p{ margin:0; opacity:.92; line-height: 1.65; }
-    .job__card ul{ margin: 0; padding-left: 18px; line-height: 1.65; }
-    .job__card li{ margin: 6px 0; opacity:.95; }
+          <div class="role">
+            <h3>313D Application (Apprentice / Mechanic)</h3>
+            <ul>
+              <li>Assist with installs, service calls, troubleshooting, and jobsite setup</li>
+              <li>Strong mechanical aptitude and willingness to learn</li>
+              <li>Reliable, punctual, and safety-first</li>
+            </ul>
+          </div>
 
-    .job__footer{
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-    .job__howto{ margin: 0; line-height: 1.65; opacity: .92; }
-    .job__howto a{ text-decoration: none; border-bottom: 1px dotted currentColor; }
+          <div class="role">
+            <h3>WETT Certified Technician</h3>
+            <ul>
+              <li>Fireplace/venting-related work and inspections (as applicable)</li>
+              <li>Strong documentation and customer communication</li>
+              <li>Clean work standards and professional appearance</li>
+            </ul>
+          </div>
 
-    .careers__why{
-      margin-top: 22px;
-      padding: 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.02);
-    }
-    .careers__why h2{ margin: 0 0 8px; font-size: 18px; }
-    .careers__why p{ margin: 0; opacity: .92; line-height: 1.65; max-width: 85ch; }
+          <div class="btnRow" style="margin-top:14px;">
+            <a class="btn btnPrimary" href="mailto:lakesidegascompany@gmail.com?subject=Careers%20%E2%80%94%20Application&body=Hi%20Lakeside%2C%0A%0AI%E2%80%99m%20applying%20for%3A%20%5B313D%20Application%20%2F%20WETT%20Certified%20Technician%5D%0A%0AName%3A%0APhone%3A%0ACity%3A%0ACertifications%3A%0AExperience%20Summary%3A%0AAvailability%3A%0A%0AThanks%2C">
+              Apply by Email
+            </a>
+            <a class="btn" href="#apply">Apply on this Page</a>
+          </div>
 
-    @media (max-width: 860px){
-      .job__card{ grid-column: span 12; }
-      .job{ padding: 16px; }
-    }
-  </style>
-</section>
+          <div class="fine">
+            Hiring inquiries are handled through our official email only:
+            <strong style="color:var(--text)">lakesidegascompany@gmail.com</strong>
+          </div>
+        </div>
+
+        <div class="panel" id="apply">
+          <h2 style="margin-top:0;">Quick application</h2>
+          <p class="muted">This opens an email draft with your details filled in.</p>
+
+          <form id="applyForm">
+            <label>
+              <span>Full name</span>
+              <input name="name" required autocomplete="name" />
+            </label>
+
+            <label>
+              <span>Phone</span>
+              <input name="phone" required autocomplete="tel" />
+            </label>
+
+            <label>
+              <span>City / Area</span>
+              <input name="city" placeholder="Peterborough / Lakefield / Trent Hills…" />
+            </label>
+
+            <label>
+              <span>Role</span>
+              <select name="role" required>
+                <option value="" selected disabled>Select a role</option>
+                <option>313D Application (Apprentice / Mechanic)</option>
+                <option>WETT Certified Technician</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Short message</span>
+              <textarea name="message" rows="5" placeholder="Experience, certifications, and availability."></textarea>
+            </label>
+
+            <div class="btnRow">
+              <button class="btn btnPrimary" type="submit">Send Application</button>
+              <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Careers%20%E2%80%94%20Application">Open Email</a>
+            </div>
+
+            <div class="fine">If your device doesn’t open email automatically, use “Open Email”.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footerRow">
+      <div>
+        <strong style="color:var(--text)">Lakeside Gas Company Incorporated</strong>
+        <div>
+          Phone/Text: 705-808-0353 • <a href="mailto:lakesidegascompany@gmail.com">lakesidegascompany@gmail.com</a> •
+          <a href="/careers.html">Careers</a>
+        </div>
+      </div>
+      <div>© <span id="yr"></span> Lakeside Gas Company Incorporated</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+
+    // Mailto application form
+    document.getElementById("applyForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const subject = encodeURIComponent("Lakeside Gas — Careers Application");
+      const body = encodeURIComponent(
+        `Applying for: ${fd.get("role")}\n` +
+        `Name: ${fd.get("name")}\n` +
+        `Phone: ${fd.get("phone")}\n` +
+        `City/Area: ${fd.get("city") || ""}\n\n` +
+        `Message:\n${fd.get("message") || ""}\n`
+      );
+      window.location.href = `mailto:lakesidegascompany@gmail.com?subject=${subject}&body=${body}`;
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
