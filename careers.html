@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Careers | Lakeside Gas Company Incorporated</title>
-  <meta name="description" content="Careers at Lakeside Gas Company Incorporated. Apply for 313D Application (Apprentice/Mechanic) or WETT Certified Technician." />
+  <meta name="description" content="Careers at Lakeside Gas Company Incorporated. Apply for Licensed Gas Technician (G2/G1), WETT Certified Technician, or 313D Refrigeration & A/C Systems Mechanic." />
 
   <style>
     :root{
@@ -26,50 +26,20 @@
     .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
 
     /* Top strip */
-    .topstrip{
-      background:#070a0f;
-      border-bottom:1px solid var(--line);
-      font-size:14px;
-    }
-    .topstrip .wrap{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:10px;padding:10px 18px;
-      flex-wrap:wrap;
-    }
+    .topstrip{background:#070a0f;border-bottom:1px solid var(--line);font-size:14px}
+    .topstrip .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;flex-wrap:wrap}
     .topstrip a{color:var(--brand);font-weight:700}
     .topstrip .small{color:var(--muted)}
     .topstrip .right{display:flex;gap:14px;flex-wrap:wrap}
 
     /* Trust micro-bar */
-    .trustbar{
-      background:rgba(15,23,34,.85);
-      border-bottom:1px solid var(--line);
-      font-size:13px;
-      color:var(--muted);
-    }
-    .trustbar .wrap{
-      padding:8px 18px;
-      display:flex;
-      justify-content:center;
-      text-align:center;
-      letter-spacing:.2px;
-    }
+    .trustbar{background:rgba(15,23,34,.85);border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+    .trustbar .wrap{padding:8px 18px;display:flex;justify-content:center;text-align:center;letter-spacing:.2px}
 
     /* Header */
-    header{
-      position:sticky;top:0;z-index:50;
-      background:rgba(11,15,20,.80);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:14px;padding:14px 0;
-    }
-    .brand{
-      display:flex;align-items:center;gap:12px;
-      min-width: 240px;
-    }
+    header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.80);backdrop-filter: blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;min-width:240px}
     nav a{color:var(--muted);font-weight:650;font-size:14px;margin-left:14px}
     nav a:hover{color:var(--text)}
 
@@ -79,27 +49,16 @@
       background:rgba(255,255,255,.05);
       font-weight:800;font-size:14px;
       transition:transform .06s ease, opacity .2s ease;
-      white-space:nowrap;
-      cursor:pointer;
+      white-space:nowrap;cursor:pointer;
     }
     .btn:active{transform:translateY(1px)}
-    .btnPrimary{
-      background:linear-gradient(135deg,var(--brand),var(--brand2));
-      border:none;color:#06101b;
-    }
+    .btnPrimary{background:linear-gradient(135deg,var(--brand),var(--brand2));border:none;color:#06101b}
     .btnRow{display:flex;gap:10px;flex-wrap:wrap}
 
-    /* Header logo sizing (same as index) */
+    /* Header logo sizing */
     .brand img{max-width:none;}
-    .logo{
-      height:100px;
-      width:auto;
-      max-height:100px;
-      display:block;
-    }
-    @media (max-width:520px){
-      .logo{height:100px;max-height:100px;}
-    }
+    .logo{height:100px;width:auto;max-height:100px;display:block}
+    @media (max-width:520px){.logo{height:100px;max-height:100px}}
 
     /* Hero */
     .hero{
@@ -109,20 +68,18 @@
         radial-gradient(900px 420px at 90% 0%, rgba(96,165,250,.16), transparent 55%);
     }
     .heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
-    @media (max-width: 980px){ .heroGrid{grid-template-columns:1fr} }
+    @media (max-width:980px){.heroGrid{grid-template-columns:1fr}}
     .kicker{color:var(--muted);margin:0 0 10px;font-size:13px}
     h1{margin:0 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.7px}
-    @media (max-width: 520px){ h1{font-size:36px} }
+    @media (max-width:520px){h1{font-size:36px}}
     .lead{margin:0 0 18px;color:var(--muted);line-height:1.65;max-width:70ch}
     .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .badge{
-      padding:8px 12px;border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--muted);font-size:13px;
+      padding:8px 12px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);color:var(--muted);font-size:13px;
     }
 
-    /* Sections + cards (same as index) */
+    /* Sections */
     section{padding:44px 0}
     .panel{
       background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
@@ -133,10 +90,8 @@
     }
     h2{margin:0 0 10px;font-size:28px;letter-spacing:-.3px}
     .muted{color:var(--muted);line-height:1.65;margin:0 0 16px}
-
     .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-    @media (max-width: 980px){ .grid2{grid-template-columns:1fr} }
-
+    @media (max-width:980px){.grid2{grid-template-columns:1fr}}
     .card{
       border:1px solid var(--line);
       border-radius:var(--radius);
@@ -145,70 +100,44 @@
     }
     .card h3{margin:0 0 6px}
     .card p{margin:0;color:var(--muted);line-height:1.6}
+    .alt{background:var(--panel2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
 
-    .alt{
-      background:var(--panel2);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    /* Forms (same as index) */
+    /* Form */
     label{display:block;margin-bottom:10px}
     label span{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}
     input, textarea, select{
-      width:100%;padding:12px 12px;border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(5,8,12,.65);
-      color:var(--text);outline:none;
-      font-size:14px;
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--line);
+      background:rgba(5,8,12,.65);color:var(--text);outline:none;font-size:14px;
     }
     textarea{resize:vertical}
     .fine{color:var(--muted);font-size:12px;line-height:1.5;margin-top:10px}
 
-    footer{
-      padding:26px 0;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:13px;
-    }
+    /* Footer */
+    footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
     .footerRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-    /* Return-to-top button (matches your index) */
+    /* Return-to-top */
     #toTop{
-      position:fixed;
-      right:22px;
-      bottom:22px;
-      width:48px;
-      height:48px;
-      border-radius:999px;
+      position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:999px;
       border:1px solid var(--line);
       background:linear-gradient(135deg,var(--brand),var(--brand2));
-      color:#06101b;
-      font-weight:900;
-      font-size:20px;
-      cursor:pointer;
+      color:#06101b;font-weight:900;font-size:20px;cursor:pointer;
       box-shadow:0 18px 60px rgba(0,0,0,.55);
-      opacity:0;
-      visibility:hidden;
-      transform:translateY(10px);
+      opacity:0;visibility:hidden;transform:translateY(10px);
       transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
       z-index:9999;
     }
-    #toTop.show{
-      opacity:1;
-      visibility:visible;
-      transform:translateY(0);
-    }
-    #toTop:hover{transform:translateY(-3px);}
-    #toTop:active{transform:translateY(0);}
+    #toTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+    #toTop:hover{transform:translateY(-3px)}
+    #toTop:active{transform:translateY(0)}
   </style>
 </head>
 
 <body>
-  <!-- Top contact strip -->
   <div class="topstrip">
     <div class="wrap">
-      <div class="small">Serving Peterborough & Surrounding Areas • Hiring</div>
+      <div class="small">Serving Peterborough & Surrounding Areas • Hiring experienced technicians</div>
       <div class="right">
         <div>Call/Text: <a href="tel:+17058080353">705-808-0353</a></div>
         <div>Email: <a href="mailto:lakesidegascompany@gmail.com">lakesidegascompany@gmail.com</a></div>
@@ -216,10 +145,9 @@
     </div>
   </div>
 
-  <!-- Trust micro-bar -->
   <div class="trustbar">
     <div class="wrap">
-      Licensed Gas Technician • Residential & Cottage Work • Serving Peterborough & Surrounding Areas
+      Licensed Gas Technician • Residential & Cottage Work • Professional, clean installs
     </div>
   </div>
 
@@ -249,75 +177,210 @@
     <section class="hero">
       <div class="wrap heroGrid">
         <div>
-          <p class="kicker">Careers • Clean work • Professional standards</p>
-          <h1>Join Lakeside.</h1>
+          <p class="kicker">Careers • Safety-first • Clean finished work</p>
+          <h1>We’re hiring experienced technicians.</h1>
           <p class="lead">
-            We’re growing and accepting applications. If you value safety, tidy installs, and clear communication,
-            apply for one of the positions below.
+            Lakeside Gas Company Incorporated is accepting applications for qualified, professional technicians.
+            We’re looking for people who show up, communicate clearly, and leave work looking finished.
           </p>
 
           <div class="btnRow">
             <a class="btn btnPrimary" href="#apply">Apply Now</a>
-            <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Careers%20%E2%80%94%20Application">Email Application</a>
+            <a class="btn" href="#positions">View Positions</a>
           </div>
 
           <div class="badges">
-            <span class="badge">Safety-first</span>
-            <span class="badge">Clean finished work</span>
-            <span class="badge">Respectful on-site</span>
+            <span class="badge">Professional standards</span>
+            <span class="badge">Respectful in homes</span>
+            <span class="badge">Documentation & clean work</span>
           </div>
         </div>
 
         <div class="panel">
-          <h2 style="margin-top:0">Open Positions</h2>
-          <p class="muted">Currently accepting applications for:</p>
-
-          <div class="card" style="margin-top:12px">
-            <h3>313D Application (Apprentice / Mechanic)</h3>
-            <p>Hands-on role assisting with installs, service calls, and clean jobsite standards.</p>
-          </div>
-
-          <div class="card" style="margin-top:12px">
-            <h3>WETT Certified Technician</h3>
-            <p>Fireplace/venting-related work and inspections (as applicable), with strong documentation.</p>
-          </div>
-
+          <h2 style="margin-top:0">Hiring Process</h2>
+          <p class="muted">What to expect if you apply:</p>
+          <ul class="list">
+            <li>We review applications within 2–5 business days.</li>
+            <li>Short phone screen (10–15 minutes).</li>
+            <li>Reference check + proof of certifications.</li>
+            <li>Paid trial / shadow day (role dependent) before ongoing work.</li>
+          </ul>
           <p class="fine" style="margin-top:12px;">
-            Hiring inquiries are handled through our official email:
+            Applications are handled through our official email:
             <strong style="color:var(--text)">lakesidegascompany@gmail.com</strong>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- DETAILS + APPLY -->
-    <section class="alt">
-      <div class="wrap grid2">
-        <div class="panel">
-          <h2 style="margin-top:0">Role Details</h2>
-          <p class="muted">What we’re looking for (high-level):</p>
+    <!-- POSITIONS -->
+    <section id="positions" class="alt">
+      <div class="wrap">
+        <h2>Open Positions</h2>
+        <p class="muted">These are not apprentice roles. Applicants must meet the requirements listed.</p>
 
-          <div class="card" style="margin-top:12px">
-            <h3>313D Application (Apprentice / Mechanic)</h3>
-            <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.8">
-              <li>Assist with installs, service calls, troubleshooting, and jobsite setup</li>
-              <li>Strong mechanical aptitude and willingness to learn</li>
-              <li>Reliable, punctual, safety-first, clean work habits</li>
-            </ul>
+        <div class="grid2">
+          <!-- WETT -->
+          <div class="panel">
+            <h2 style="margin-top:0">WETT Certified Technician</h2>
+            <p class="muted">
+              Solid fuel inspection and evaluation role. Requires valid WETT certification and professional reporting standards.
+            </p>
+
+            <div class="card">
+              <h3>Core Responsibilities</h3>
+              <ul class="list">
+                <li>Inspect and evaluate solid fuel–burning systems (wood stoves, fireplaces, chimneys, connectors, venting)</li>
+                <li>Perform WETT inspections (Level 1 / Level 2 / Level 3 — as certified)</li>
+                <li>Document deficiencies, clearances, safety risks, and recommended corrections</li>
+                <li>Produce clear written reports suitable for homeowners, insurers, and real estate transactions</li>
+                <li>Maintain a clean, professional presence on-site</li>
+              </ul>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>Requirements (must-have)</h3>
+              <ul class="list">
+                <li>Current WETT certification (proof required)</li>
+                <li>Minimum 2 years practical experience with solid fuel systems OR verified inspection volume</li>
+                <li>Valid driver’s license and reliable transportation</li>
+                <li>Strong written communication and documentation skills</li>
+                <li>Ability to work in attics/roofs/variable conditions safely (role dependent)</li>
+              </ul>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>Assets (nice-to-have)</h3>
+              <ul class="list">
+                <li>Experience producing insurance-ready / realtor-ready inspection reports</li>
+                <li>Experience with cottage/rural properties and older installations</li>
+                <li>Comfortable coordinating with other trades on remediation scopes</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="card" style="margin-top:12px">
-            <h3>WETT Certified Technician</h3>
-            <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.8">
-              <li>Fireplace/venting-related work and inspections (as applicable)</li>
-              <li>Strong documentation and customer communication</li>
-              <li>Clean standards and professional appearance</li>
-            </ul>
+          <!-- 313D -->
+          <div class="panel">
+            <h2 style="margin-top:0">313D Refrigeration & A/C Systems Mechanic</h2>
+            <p class="muted">
+              Experienced HVAC/R role focused on professional diagnostics, service, and clean finished installs.
+            </p>
+
+            <div class="card">
+              <h3>Core Responsibilities</h3>
+              <ul class="list">
+                <li>Diagnose, service, and repair HVAC/R equipment (residential/light commercial—depending on scope)</li>
+                <li>Perform maintenance, system checks, and professional troubleshooting</li>
+                <li>Communicate findings clearly to customers and document work completed</li>
+                <li>Maintain clean work standards and protect customer property</li>
+              </ul>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>Requirements (must-have)</h3>
+              <ul class="list">
+                <li>Valid 313D certification (proof required)</li>
+                <li>Minimum 3 years field experience post-certification</li>
+                <li>Valid driver’s license and reliable transportation</li>
+                <li>Ability to work independently, manage time, and communicate professionally</li>
+                <li>Own basic hand tools suitable for service work</li>
+              </ul>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>Assets (nice-to-have)</h3>
+              <ul class="list">
+                <li>Experience with rural/cottage service calls</li>
+                <li>Comfortable with documentation, photos, and clean “finished” presentation</li>
+                <li>Any gas-related licensing or experience (do not specify in application if not applicable)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- GAS TECH -->
+          <div class="panel">
+            <h2 style="margin-top:0">Licensed Gas Technician (G2 / G1)</h2>
+            <p class="muted">
+              Experienced residential gas technician focused on clean installs, service calls,
+              troubleshooting, and professional customer interaction.
+            </p>
+
+            <div class="card">
+              <h3>Core Responsibilities</h3>
+              <ul class="list">
+                <li>Install, service, and troubleshoot residential gas appliances and piping systems</li>
+                <li>Perform generator hook-ups, BBQ lines, appliance connections, and system diagnostics</li>
+                <li>Conduct safe testing, leak checks, and proper documentation</li>
+                <li>Communicate clearly with homeowners and provide professional recommendations</li>
+                <li>Maintain clean, organized job sites and protect customer property</li>
+              </ul>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>Requirements (must-have)</h3>
+              <ul class="list">
+                <li>Valid G2 or G1 gas technician license (proof required)</li>
+                <li>Minimum 3 years field experience (G2) or 5+ years (G1 preferred)</li>
+                <li>Strong knowledge of residential gas code and safe installation practices</li>
+                <li>Valid driver’s license and reliable transportation</li>
+                <li>Own professional-grade hand tools suitable for service work</li>
+              </ul>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3>Assets (nice-to-have)</h3>
+              <ul class="list">
+                <li>Experience with generator installs and outdoor gas lines</li>
+                <li>Experience working in rural or cottage environments</li>
+                <li>Strong troubleshooting and diagnostic ability</li>
+                <li>Comfortable working independently and managing daily schedule</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="panel" id="apply">
-          <h2 style="margin-top:0">Apply</h2>
+        <p class="fine" style="margin-top:14px;">
+          Note: We run a professional operation. Applicants may be asked for proof of certification, references, and a clean driver abstract.
+        </p>
+      </div>
+    </section>
+
+    <!-- APPLY -->
+    <section id="apply">
+      <div class="wrap grid2">
+        <div class="panel">
+          <h2 style="margin-top:0">What we need from you</h2>
+          <p class="muted">A serious application helps us respond faster.</p>
+
+          <div class="card">
+            <h3>Submit</h3>
+            <ul class="list">
+              <li>Contact info + service area</li>
+              <li>Role, years of experience, and certification numbers (if applicable)</li>
+              <li>Work availability + start date</li>
+              <li>Resume link (preferred) + references</li>
+              <li>Pay expectations (range)</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3>Professional expectations</h3>
+            <ul class="list">
+              <li>Clear communication with customers</li>
+              <li>Clean work habits and respect for property</li>
+              <li>Documentation (photos/notes) when required</li>
+              <li>Punctuality and reliability</li>
+            </ul>
+          </div>
+
+          <div class="btnRow" style="margin-top:14px">
+            <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Careers%20%E2%80%94%20Application">Email us directly</a>
+            <a class="btn btnPrimary" href="#applyFormWrap">Use the application form</a>
+          </div>
+        </div>
+
+        <div class="panel" id="applyFormWrap">
+          <h2 style="margin-top:0">Application Form</h2>
           <p class="muted">This form creates an email draft with your details filled in.</p>
 
           <form id="applyForm">
@@ -327,36 +390,135 @@
             </label>
 
             <label>
+              <span>Email</span>
+              <input name="email" type="email" required autocomplete="email" placeholder="you@email.com" />
+            </label>
+
+            <label>
               <span>Phone</span>
-              <input name="phone" required autocomplete="tel" />
+              <input name="phone" required autocomplete="tel" placeholder="(###) ###-####" />
             </label>
 
             <label>
-              <span>City / Area</span>
-              <input name="city" placeholder="Peterborough / Lakefield / Trent Hills…" />
+              <span>Home base (Town/Area)</span>
+              <input name="city" required placeholder="e.g., Peterborough / Lakefield / Trent Hills" />
             </label>
 
             <label>
-              <span>Role</span>
+              <span>Position applying for</span>
               <select name="role" required>
                 <option value="" selected disabled>Select a role</option>
-                <option>313D Application (Apprentice / Mechanic)</option>
+                <option>Licensed Gas Technician (G2 / G1)</option>
                 <option>WETT Certified Technician</option>
+                <option>313D Refrigeration & A/C Systems Mechanic</option>
               </select>
             </label>
 
             <label>
-              <span>Message</span>
-              <textarea name="message" rows="5" placeholder="Experience, certifications, availability, and any notes."></textarea>
+              <span>Years of relevant experience</span>
+              <select name="experience" required>
+                <option value="" selected disabled>Select</option>
+                <option>2–3 years</option>
+                <option>3–5 years</option>
+                <option>5–10 years</option>
+                <option>10+ years</option>
+              </select>
+            </label>
+
+            <div class="card" style="margin-top:12px">
+              <h3 style="margin:0 0 6px">Certification details</h3>
+              <p style="margin:0;color:var(--muted);line-height:1.6">
+                Enter what applies. Include certificate/license number.
+              </p>
+
+              <div style="display:grid; gap:10px; margin-top:12px">
+                <label style="margin:0">
+                  <span>Gas License number (G2 / G1)</span>
+                  <input name="gasLicense" placeholder="Enter gas license #" />
+                </label>
+
+                <label style="margin:0">
+                  <span>WETT Certification (level/number)</span>
+                  <input name="wettNumber" placeholder="e.g., WETT # / level(s)" />
+                </label>
+
+                <label style="margin:0">
+                  <span>313D License number</span>
+                  <input name="d313Number" placeholder="e.g., 313D license #" />
+                </label>
+
+                <label style="margin:0">
+                  <span>Other certifications (Working at Heights, WHMIS, etc.)</span>
+                  <input name="otherCerts" placeholder="List any additional certifications" />
+                </label>
+              </div>
+            </div>
+
+            <label style="margin-top:12px">
+              <span>Driver’s license + reliable transportation?</span>
+              <select name="transport" required>
+                <option value="" selected disabled>Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Availability</span>
+              <select name="availability" required>
+                <option value="" selected disabled>Select</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>On-call / Seasonal</option>
+                <option>Weekends only</option>
+                <option>Evenings only</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Earliest start date</span>
+              <input name="startDate" required placeholder="ASAP / date / after notice period" />
+            </label>
+
+            <label>
+              <span>Pay expectations (range)</span>
+              <input name="pay" required placeholder="e.g., $30–$40/hr or per job" />
+            </label>
+
+            <label>
+              <span>Resume link (preferred)</span>
+              <input name="resumeLink" placeholder="Google Drive / Dropbox / PDF link" />
+            </label>
+
+            <div class="card" style="margin-top:12px">
+              <h3 style="margin:0 0 6px">References</h3>
+              <p style="margin:0;color:var(--muted);line-height:1.6">
+                Provide at least 2 professional references (name + company + phone/email).
+              </p>
+              <div style="display:grid; gap:10px; margin-top:12px">
+                <label style="margin:0">
+                  <span>Reference #1</span>
+                  <input name="ref1" required placeholder="Name — Company — Phone/Email" />
+                </label>
+                <label style="margin:0">
+                  <span>Reference #2</span>
+                  <input name="ref2" required placeholder="Name — Company — Phone/Email" />
+                </label>
+              </div>
+            </div>
+
+            <label style="margin-top:12px">
+              <span>Short message</span>
+              <textarea name="message" rows="6" placeholder="Brief summary: your experience, what you’re best at, and what type of work you want."></textarea>
             </label>
 
             <div class="btnRow">
-              <button class="btn btnPrimary" type="submit">Email Application</button>
+              <button class="btn btnPrimary" type="submit">Create Email Application</button>
               <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Careers%20%E2%80%94%20Application">Open Email</a>
             </div>
 
             <div class="fine">
-              If your device doesn’t open your email app, use “Open Email”.
+              By applying, you confirm the information provided is accurate and you can provide proof of certification upon request.
             </div>
           </form>
         </div>
@@ -377,24 +539,45 @@
     </div>
   </footer>
 
-  <!-- Return to top button -->
   <button id="toTop" aria-label="Return to top" title="Return to top">↑</button>
 
   <script>
     document.getElementById("yr").textContent = new Date().getFullYear();
 
-    // Mailto application form (same approach as your quote form)
+    // Mailto application form
     document.getElementById("applyForm").addEventListener("submit", function(e){
       e.preventDefault();
       const fd = new FormData(e.target);
+
       const subject = encodeURIComponent("Lakeside Gas — Careers Application");
+
       const body = encodeURIComponent(
-        `Applying for: ${fd.get("role")}\n` +
-        `Name: ${fd.get("name")}\n` +
-        `Phone: ${fd.get("phone")}\n` +
-        `City/Area: ${fd.get("city") || ""}\n\n` +
-        `Message:\n${fd.get("message") || ""}\n`
+        `POSITION APPLYING FOR: ${fd.get("role")}\n\n` +
+
+        `FULL NAME: ${fd.get("name")}\n` +
+        `EMAIL: ${fd.get("email")}\n` +
+        `PHONE: ${fd.get("phone")}\n` +
+        `HOME BASE (TOWN/AREA): ${fd.get("city")}\n\n` +
+
+        `YEARS OF EXPERIENCE: ${fd.get("experience")}\n` +
+        `GAS LICENSE NUMBER (G2/G1): ${fd.get("gasLicense") || "N/A"}\n` +
+        `WETT CERTIFICATION (LEVEL/NUMBER): ${fd.get("wettNumber") || "N/A"}\n` +
+        `313D LICENSE NUMBER: ${fd.get("d313Number") || "N/A"}\n` +
+        `OTHER CERTIFICATIONS: ${fd.get("otherCerts") || "N/A"}\n\n` +
+
+        `DRIVER + TRANSPORTATION: ${fd.get("transport")}\n` +
+        `AVAILABILITY: ${fd.get("availability")}\n` +
+        `EARLIEST START DATE: ${fd.get("startDate")}\n` +
+        `PAY EXPECTATIONS: ${fd.get("pay")}\n` +
+        `RESUME LINK: ${fd.get("resumeLink") || "Not provided"}\n\n` +
+
+        `REFERENCES:\n` +
+        `1) ${fd.get("ref1")}\n` +
+        `2) ${fd.get("ref2")}\n\n` +
+
+        `MESSAGE:\n${fd.get("message") || ""}\n`
       );
+
       window.location.href = `mailto:lakesidegascompany@gmail.com?subject=${subject}&body=${body}`;
       e.target.reset();
     });
