@@ -122,8 +122,13 @@
     h2{margin:0 0 10px;font-size:28px;letter-spacing:-.3px}
     .muted{color:var(--muted);line-height:1.65;margin:0 0 16px}
 
+    /* UPDATED: use 4-column grid for Services so the new card fits clean */
+    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    @media (max-width: 980px){ .grid4{grid-template-columns:1fr} }
+
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media (max-width: 980px){ .grid3{grid-template-columns:1fr} }
+
     .card{
       border:1px solid var(--line);
       border-radius:var(--radius);
@@ -223,7 +228,8 @@
   <!-- Top contact strip -->
   <div class="topstrip">
     <div class="wrap">
-      <div class="small">Serving Peterborough & Surrounding Areas • Spring/Summer bookings</div>
+      <!-- UPDATED -->
+      <div class="small">Serving Peterborough & Surrounding Areas • Mobile propane bookings</div>
       <div class="right">
         <div>Call/Text: <a href="tel:+17058080353">705-808-0353</a></div>
         <div>Email: <a href="mailto:lakesidegascompany@gmail.com">lakesidegascompany@gmail.com</a></div>
@@ -231,7 +237,7 @@
     </div>
   </div>
 
-  <!-- Trust micro-bar (this was incorrectly inside your CSS before) -->
+  <!-- Trust micro-bar -->
   <div class="trustbar">
     <div class="wrap">
       Licensed Gas Technician • Residential & Cottage Work • Serving Peterborough & Surrounding Areas
@@ -246,6 +252,8 @@
 
       <nav>
         <a href="#services">Services</a>
+        <!-- ADDED -->
+        <a href="/food-truck-propane-services.html">Food Trucks</a>
         <a href="/inspections.html">Inspections</a>
         <a href="/maintenance-plans.html">Maintenance</a>
         <a href="/careers.html">Careers</a>
@@ -303,6 +311,7 @@
                 <option>Generator gas hook-up</option>
                 <option>Outdoor BBQ gas line / quick connect</option>
                 <option>Appliance hook-up (stove / dryer)</option>
+                <option>Food truck / trailer propane (inspection/install/repair)</option>
                 <option>Other gas service</option>
               </select>
             </label>
@@ -334,7 +343,8 @@
         <h2>Services</h2>
         <p class="muted">Focused, high-demand work for cottages and rural homes.</p>
 
-        <div class="grid3">
+        <!-- UPDATED: grid4 so the new card fits perfectly -->
+        <div class="grid4">
           <div class="card">
             <h3>Generator Hook-Ups</h3>
             <p>Clean, finished gas connection to an installed generator with neat piping and shutoff.</p>
@@ -347,12 +357,38 @@
             <h3>Appliance Hook-Ups</h3>
             <p>Stove/range and dryer hook-ups with safe connections and a clean finished look.</p>
           </div>
+
+          <!-- ADDED: Mobile Propane services card -->
+          <div class="card">
+            <h3>Food Trucks & Trailers (Propane)</h3>
+            <p>Propane inspections, pressure testing, installations, and repairs for mobile kitchens.</p>
+            <p style="margin-top:10px">
+              <a class="btn" href="/food-truck-propane-services.html">View Services</a>
+            </p>
+          </div>
         </div>
 
         <div class="badges" style="margin-top:14px">
           <span class="badge">Tidy installs</span>
           <span class="badge">Clear pricing</span>
           <span class="badge">Respect for your property</span>
+        </div>
+
+        <!-- ADDED: Mobile propane quick links panel (clean, on-brand) -->
+        <div class="panel" style="margin-top:14px">
+          <h3 style="margin:0 0 8px">Mobile Propane (Food Trucks & Trailers)</h3>
+          <p class="muted" style="margin:0 0 12px">
+            Inspections, pressure testing, installations, and repairs for mobile propane systems.
+          </p>
+          <div class="btnRow">
+            <a class="btn btnPrimary" href="/food-truck-propane-services.html">Overview</a>
+            <a class="btn" href="/food-truck-propane-inspection.html">Inspections</a>
+            <a class="btn" href="/food-truck-propane-installation.html">Installations</a>
+            <a class="btn" href="/food-truck-propane-repair.html">Repairs</a>
+          </div>
+          <div class="fine" style="margin-top:10px">
+            Fastest scheduling: call/text <strong style="color:var(--text)">705-808-0353</strong>. Photos help for quoting.
+          </div>
         </div>
       </div>
     </section>
@@ -436,7 +472,7 @@ Subject: Lakeside Gas – Service Request
 Name:
 Phone:
 Address / Town:
-Service Needed: (Generator / BBQ line / Appliance hookup)
+Service Needed: (Generator / BBQ line / Appliance hookup / Food Truck Propane)
 Details:
 Timeline:
 Photos (if available):
@@ -446,7 +482,7 @@ Photos (if available):
       </div>
     </section>
 
-    <!-- CONTACT (added cleanly inside the page) -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="wrap">
         <h2>Contact</h2>
