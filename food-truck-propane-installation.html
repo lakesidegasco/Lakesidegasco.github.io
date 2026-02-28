@@ -1,1 +1,262 @@
+<!-- force rebuild -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Truck Propane Installation | Lakeside Gas Company Incorporated</title>
+  <meta name="description" content="Propane installations and upgrades for food trucks and mobile trailers. Appliance hook-ups, routing, regulators, and pressure testing. Serving Peterborough & surrounding areas." />
 
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1722;
+      --panel2:#0c121b;
+      --line:rgba(255,255,255,.10);
+      --text:#e8eef6;
+      --muted:#aab6c5;
+      --brand:#38bdf8;
+      --brand2:#60a5fa;
+      --shadow: 0 18px 60px rgba(0,0,0,.50);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+
+    .topstrip{background:#070a0f;border-bottom:1px solid var(--line);font-size:14px;}
+    .topstrip .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;flex-wrap:wrap;}
+    .topstrip a{color:var(--brand);font-weight:700}
+    .topstrip .small{color:var(--muted)}
+    .topstrip .right{display:flex;gap:14px;flex-wrap:wrap}
+
+    .trustbar{background:rgba(15,23,34,.85);border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);}
+    .trustbar .wrap{padding:8px 18px;display:flex;justify-content:center;text-align:center;letter-spacing:.2px;}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.80);backdrop-filter: blur(10px);border-bottom:1px solid var(--line);}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
+    .brand{display:flex;align-items:center;gap:12px;min-width: 240px;}
+    nav a{color:var(--muted);font-weight:650;font-size:14px;margin-left:14px}
+    nav a:hover{color:var(--text)}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      font-weight:800;font-size:14px;
+      transition:transform .06s ease, opacity .2s ease;
+      white-space:nowrap;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btnPrimary{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      border:none;color:#06101b;
+    }
+    .btnRow{display:flex;gap:10px;flex-wrap:wrap}
+
+    .hero{
+      padding:44px 0 18px;
+      background:
+        radial-gradient(900px 420px at 10% 0%, rgba(56,189,248,.20), transparent 55%),
+        radial-gradient(900px 420px at 90% 0%, rgba(96,165,250,.16), transparent 55%);
+    }
+    .heroGrid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:start}
+    @media (max-width: 980px){ .heroGrid{grid-template-columns:1fr} }
+    .kicker{color:var(--muted);margin:0 0 10px;font-size:13px}
+    h1{margin:0 0 10px;font-size:44px;line-height:1.05;letter-spacing:-.7px}
+    @media (max-width: 520px){ h1{font-size:36px} }
+    .lead{margin:0 0 18px;color:var(--muted);line-height:1.65;max-width:62ch}
+
+    section{padding:44px 0}
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+    }
+    h2{margin:0 0 10px;font-size:28px;letter-spacing:-.3px}
+    .muted{color:var(--muted);line-height:1.65;margin:0 0 16px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width: 980px){ .grid3{grid-template-columns:1fr} }
+    .card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.03);padding:16px;}
+    .card h3{margin:0 0 6px}
+    .card p{margin:0;color:var(--muted);line-height:1.6}
+    .list{margin:0;padding-left:18px;color:var(--muted);line-height:1.8}
+    .alt{background:var(--panel2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+
+    footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;}
+    .footerRow{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .tssaBadge img{height:80px;width:auto;}
+    .brand img{max-width:none;}
+    .logo{height:100px;width:auto;max-height:100px;display:block;}
+    @media (max-width:520px){ .logo{height:100px;max-height:100px;} }
+
+    #toTop{
+      position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:999px;border:1px solid var(--line);
+      background:linear-gradient(135deg,var(--brand),var(--brand2));color:#06101b;font-weight:900;font-size:20px;cursor:pointer;
+      box-shadow:0 18px 60px rgba(0,0,0,.55);opacity:0;visibility:hidden;transform:translateY(10px);
+      transition:opacity .2s ease, transform .2s ease, visibility .2s ease;z-index:9999;
+    }
+    #toTop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    #toTop:hover{transform:translateY(-3px);}
+    #toTop:active{transform:translateY(0);}
+  </style>
+</head>
+
+<body>
+  <div class="topstrip">
+    <div class="wrap">
+      <div class="small">Serving Peterborough & Surrounding Areas • Mobile propane bookings</div>
+      <div class="right">
+        <div>Call/Text: <a href="tel:+17058080353">705-808-0353</a></div>
+        <div>Email: <a href="mailto:lakesidegascompany@gmail.com">lakesidegascompany@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trustbar">
+    <div class="wrap">
+      Licensed Gas Technician • Residential & Cottage Work • Serving Peterborough & Surrounding Areas
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="LakesidegascoLOGOS(1)(2).png" alt="Lakeside Gas Company logo" class="logo">
+      </div>
+
+      <nav>
+        <a href="/index.html#services">Services</a>
+        <a href="/food-truck-propane-services.html">Food Trucks</a>
+        <a href="/inspections.html">Inspections</a>
+        <a href="/maintenance-plans.html">Maintenance</a>
+        <a href="/careers.html">Careers</a>
+        <a href="/index.html#areas">Service Area</a>
+        <a href="/index.html#why">Why Us</a>
+        <a href="/index.html#quote">Get a Quote</a>
+        <a href="/index.html#contact">Contact</a>
+        <a class="btn" href="https://www.instagram.com/lakesidegascompany/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap heroGrid">
+        <div>
+          <p class="kicker">Food Truck / Trailer • Propane</p>
+          <h1>Propane installation and upgrades for mobile kitchens.</h1>
+          <p class="lead">
+            New build installs, appliance additions, and system upgrades for food trucks and mobile trailers.
+            Work is routed cleanly, supported properly, and pressure tested before operation.
+          </p>
+
+          <div class="btnRow">
+            <a class="btn btnPrimary" href="tel:+17058080353">Call / Text 705-808-0353</a>
+            <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Food%20Truck%20Propane%20Installation%20Request">Email Request</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2 style="margin-top:0">Best for:</h2>
+          <ul class="list">
+            <li>New builds (truck or trailer)</li>
+            <li>Appliance additions or layout changes</li>
+            <li>Regulator/manifold upgrades</li>
+            <li>Cleanup of messy installs</li>
+          </ul>
+          <p class="muted" style="margin-top:12px">
+            For faster quoting, include photos and a list of appliances.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>What We Install</h2>
+        <p class="muted">Propane work for mobile kitchens, done clean and tested.</p>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>New Build Systems</h3>
+            <p>Complete propane installs for truck/trailer builds, planned around your equipment and layout.</p>
+          </div>
+          <div class="card">
+            <h3>Appliance Hook-Ups</h3>
+            <p>Connections for mobile kitchen appliances with proper routing and secure supports.</p>
+          </div>
+          <div class="card">
+            <h3>Upgrades & Changes</h3>
+            <p>System modifications after renovations, appliance swaps, or equipment additions.</p>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:14px">
+          <h3 style="margin:0 0 8px">What to send for a faster quote</h3>
+          <ul class="list">
+            <li>Your location (town / area)</li>
+            <li>Appliance list (fryer / range / griddle / etc.)</li>
+            <li>Photos of cylinder storage and regulator area</li>
+            <li>Photos of the line run and appliance connections</li>
+            <li>Timeline (when you need it completed)</li>
+          </ul>
+        </div>
+
+        <div class="btnRow" style="margin-top:14px">
+          <a class="btn" href="/food-truck-propane-services.html">← Back to Food Truck Propane Services</a>
+          <a class="btn" href="/food-truck-propane-inspection.html">Need an Inspection?</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <h2>Request Installation Service</h2>
+        <p class="muted">Call/text is fastest. Email anytime.</p>
+        <div class="btnRow">
+          <a class="btn btnPrimary" href="tel:+17058080353">Call / Text 705-808-0353</a>
+          <a class="btn" href="mailto:lakesidegascompany@gmail.com?subject=Food%20Truck%20Propane%20Installation%20Request">Email Lakeside Gas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footerRow">
+      <div>
+        <strong style="color:var(--text)">Lakeside Gas Company Incorporated</strong>
+        <div>
+          Phone/Text: 705-808-0353 • <a href="mailto:lakesidegascompany@gmail.com">lakesidegascompany@gmail.com</a> •
+          <a href="/careers.html">Careers</a>
+        </div>
+      </div>
+      <div>© <span id="yr"></span> Lakeside Gas Company Incorporated</div>
+    </div>
+
+    <div class="wrap" style="text-align:center; margin-top:14px;">
+      <div class="tssaBadge" style="justify-content:center;">
+        <img src="tssa-logo.png" alt="TSSA – Technical Standards and Safety Authority">
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Return to top" title="Return to top">↑</button>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 320) toTop.classList.add("show");
+      else toTop.classList.remove("show");
+    });
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
